@@ -3,6 +3,23 @@ izarusBootstrapPlugin
 
 Plugin Symfony 1.4 con widgets, helpers, generadores y estilos de Bootstrap 3.
 
+## Helpers
+### BootstrapHelper
+
+```php
+<?php use_helper('Bootstrap') ?>
+```
+#### Funciones
+
+##### `bs_btn_link($text, $url, $type='default', $size=null, $attributes=array())`
+
+**parámetro** | **tipo** | **valor predeterminado** | descripción
+--- | --- | --- | ---
+text | string | | Texto del botón
+url | string | | Url para el botón (se puede usar ```url_for()```)
+type | string | default | (opcional) Tipo del botón para estilo: `default, primary, success, info, danger, warning`
+size | string |  | (opcional) Tamaño del botón distinto al estándar: `sm, xs, lg`
+attributes | array |  | (opcional) Atributos HTML adicionales
 
 
 ## Widgets
