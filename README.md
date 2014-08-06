@@ -11,7 +11,10 @@ Plugin Symfony 1.4 con widgets, helpers, generadores y estilos de Bootstrap 3.
 ```
 #### Funciones
 
+---
+
 ##### `bs_btn_link($text, $url, $type='default', $size=null, $attributes=array())`
+Devuelve el HTML de un link `<a href="">` con estilo botón.
 
 **parámetro** | **tipo** | **valor predeterminado** | descripción
 --- | --- | --- | ---
@@ -21,6 +24,28 @@ type | string | default | (opcional) Tipo del botón para estilo: `default, prim
 size | string |  | (opcional) Tamaño del botón distinto al estándar: `sm, xs, lg`
 attributes | array |  | (opcional) Atributos HTML adicionales
 
+Ejemplo:
+
+```php
+<?php echo bs_btn_link('Login', url_for('usuario/login'), 'primary', 'ls') ?>
+```
+
+---
+
+#### `bs_alert($text, $type='info', $dismiss=false)`
+Devuelve el HTML de un cuadro de alerta.
+
+**parámetro** | **tipo** | **valor predeterminado** | descripción
+--- | --- | --- | ---
+text | string | | Texto de la alerta
+type | string | info | (opcional) Tipo de alerta para estilo: `success, info, danger, warning`
+dismiss | boolean | false | (opcional) Si se muestra el botón para cerrar (ocultar) la alerta
+
+Ejemplo:
+
+```php
+<?php echo bs_alert('Operación exitosa','success',true) ?>
+```
 
 ## Widgets
 ### izarusWidgetFormBootstrapDatetime
