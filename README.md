@@ -47,6 +47,36 @@ Ejemplo:
 <?php echo bs_alert('Operación exitosa','success',true) ?>
 ```
 
+---
+
+#### `bs_breadcrumb($sites=array(), $home_url='')`
+Devuelve el HTML de breadcrumbs.
+
+**parámetro** | **tipo** | **valor predeterminado** | descripción
+--- | --- | --- | ---
+sites | array | | Lista de links: `array('Primer item'=>url_for('@primer_item', 'Segundo item'=>url_for('@segundo_item'), ...))`
+home_url | string | | (opcional) Link de la página principal. Por defecto usará el resultado de `url_for(@homepage)`
+
+Ejemplo:
+
+```php
+<?php echo bs_breadcrumb(array(
+  'Products' => url_for('products/list'),
+  'Main Category' => url_for('products/category?cat=1'),
+  'Item 4656'  => url_for('products/view?id=4656'),
+)) ?>
+```
+
+```html
+<ol class="breadcrumb">
+ <li><a href="/"><i class="glyphicon glyphicon-home"></i></a></li>
+ <li><a href="/products">Products</a></li>
+ <li><a href="/products/category/1">Main Category</a></li>
+ <li><a href="/products/4656">Item 4656</a></li>
+</ol>
+```
+
+
 ## Widgets
 ### izarusWidgetFormBootstrapDatetime
 ```php
